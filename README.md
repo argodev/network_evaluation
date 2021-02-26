@@ -18,7 +18,7 @@ The first part of the tests involve transferring data across your network to eva
 
 ### Server
 
-Running the server for this test is fairly straight forward. You simply need to run `iperf3 -s` and let it sit. If it is helpful, the [`local_server.sh]`(local_server.sh) script will run this for you.
+Running the server for this test is fairly straight forward. You simply need to run `iperf3 -s` and let it sit. If it is helpful, the [`local_server.sh`](local_server.sh) script will run this for you.
 
 > **NOTE:** If you are running a firewall on your server (`iptables` or `ufw` or similar), you must ensure that port `5201/tcp` is open for incoming traffic.
 
@@ -26,9 +26,21 @@ Running the server for this test is fairly straight forward. You simply need to 
 
 Running the client is similarly easy, but requires a few steps.
 
-1. You need to make a copy of `client_vars.sample` and save it as `client_vars.sh`.
+1. You need to make a copy of `client_vars.sample` and save it as `client_vars.sh`. This file (`client_vars.sh`) must be located in the same directory as the test script (`local_client.sh`).
 1. You should edit this new file and customize the properties in it to match your enviornment (iperf3 server, number of iterations, etc.)
 1. Then, you should be able to run `./local_client.sh` and it will run through the test loops.
    1. For each loop, it will collect data in both directions (client --> server, server --> client)
    1. Output files (`*.json`) will be stored in a directory named based on the current date: `./data/YYMMDD/`
+
+![sample client script](images/localclient.gif)
+
+## External/Internet Transfer Evaluation
+
+
+
+
+
+## Analysis
+
+Having collected the data using the tools above, here's where we generate the reports and review the data.
 

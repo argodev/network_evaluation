@@ -40,7 +40,7 @@ do
     x=0
     while sleep 1; do progress_bar "$x" client to server...; ((x=x+10)); done& wait $p; kill $!;
     echo -ne "\r\033[0K\r"
-    echo -e "\t completed client --> server"
+    WriteGreen "\t completed client --> server"
 
     # reverse (S --> C)...
     iperf3 -c ${SERVER} -R -J --logfile ${rname} &
@@ -48,7 +48,7 @@ do
     x=0
     while sleep 1; do progress_bar "$x" server to client...; ((x=x+10)); done& wait $p; kill $!;
     echo -ne "\r\033[0K\r"
-    echo -e "\r\t completed server --> client"
+    WriteGreen "\t completed server --> client"
 
 done
 
