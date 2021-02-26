@@ -6,7 +6,7 @@ This is a simple collection of scripts and notes supporting a simple network eva
 
 ### Server
 
-In order to run the evaluation tests, you need to have at least two machines. The first will be the _"server"_ and will run a copy of `iperf3` in server mode.  If you happen to be running a reasonably recent copy of Ubuntu, the `setup_server.sh` script should ensure you have what you need.
+In order to run the evaluation tests, you need to have at least two machines. The first will be the _"server"_ and will run a copy of `iperf3` in server mode.  If you happen to be running a reasonably recent copy of Ubuntu, the [`setup_server.sh`](setup_server.sh) script should ensure you have what you need.
 
 ### Client
 
