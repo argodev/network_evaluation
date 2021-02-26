@@ -1,0 +1,8 @@
+# scratch/temp files
+t1/
+data/
+bubba.json
+test.sh
+
+# don't include actual client variables file
+client_vars.sh

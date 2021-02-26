@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# ENTER CUSTOMIZATIONS HERE
+
+# server name/ip to connect to for local-network (iperf3) tests
+SERVER="192.168.1.1"
+
+# number of times to run each test
+NUM_LOOPS=5
