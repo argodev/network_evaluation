@@ -27,15 +27,33 @@ Running the server for this test is fairly straight forward. You simply need to 
 Running the client is similarly easy, but requires a few steps.
 
 1. You need to make a copy of `client_vars.sample` and save it as `client_vars.sh`. This file (`client_vars.sh`) must be located in the same directory as the test script (`local_client.sh`).
-1. You should edit this new file and customize the properties in it to match your enviornment (iperf3 server, number of iterations, etc.)
-1. Then, you should be able to run `./local_client.sh` and it will run through the test loops.
+1. You should edit this new file and customize the properties in it to match your environment (iperf3 server, number of iterations, etc.)
+1. Then, you should be able to run `./local_client.sh [identifier]` and it will run through the test loops.
+   1. The `identifier` is simply a tag to uniquely identify this test collection. It could be `location01` or whatever fits.
    1. For each loop, it will collect data in both directions (client --> server, server --> client)
-   1. Output files (`*.json`) will be stored in a directory named based on the current date: `./data/YYMMDD/`
+   1. Output files (`*.json`) will be stored in a directory named based on the current date: `./data/YYMMDD/`. For each iteration, there will be two files generated, one with a `*.f.json` and one with `*.r.json`. Here `f` is for *forward* (client --> server) and `r` is for *reverse* (server --> client). They will each be tagged with the loop/iteration number as well. An example listing is provided below. In this scenario, `loc01` was the identifier and the test ran for `3` loops:
+      * loc01.01.f.json
+      * loc01.01.r.json
+      * loc01.02.f.json
+      * loc01.02.r.json
+      * loc01.03.f.json
+      * loc01.03.r.json
 
 ![sample client script](images/localclient.gif)
 
 ## External/Internet Transfer Evaluation
 
+
+Running the client is similarly easy, but requires a few steps.
+
+1. You need to make a copy of `client_vars.sample` and save it as `client_vars.sh`. This file (`client_vars.sh`) must be located in the same directory as the test script (`remote_client.sh`). If you did this in the previous step, you do not need to repeat it.
+1. You should edit this new file and customize the properties in it to match your environment (speedtest server id, number of iterations, etc.)
+1. Then, you should be able to run `./remote_client.sh [identifier]` and it will run through the test loops.
+   1. The `identifier` is simply a tag to uniquely identify this test collection. It could be `location01` or whatever fits.
+   1. For each loop, it will collect data in both directions (client --> server, server --> client)
+   1. Output files (`*.json`) will be stored in a directory named based on the current date: `./data/YYMMDD/`
+
+![sample remote client script](images/remoteclient.gif)
 
 
 

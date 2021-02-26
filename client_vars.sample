@@ -7,3 +7,8 @@ SERVER="192.168.1.1"
 
 # number of times to run each test
 NUM_LOOPS=5
+
+# ID of SpeedTest Server
+# get a list of those near you: 
+# speedtest -L
+STSERVERID=3965
