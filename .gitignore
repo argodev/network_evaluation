@@ -6,3 +6,5 @@ test.sh
 
 # don't include actual client variables file
 client_vars.sh
+
+.ipynb_checkpoints/

@@ -20,7 +20,7 @@ USAGE_TEXT="\n Usage: $0 sample_name \n \n Where sample_name uniquely represents
 
 # display banner and let the user indicate they are ready
 echo -e ${BANNER}
-read -p "Press enter to continue"
+#read -p "Press enter to continue"
 
 # if we are proceeding, let's create an ouput directory for the results
 DATA_DIR="./data/$(date +"%Y%m%d")"
